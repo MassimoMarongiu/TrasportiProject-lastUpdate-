@@ -1,0 +1,56 @@
+https://github.com/jod35/Flask-React-Recipes/tree/main
+https://www.youtube.com/watch?v=RcQwcyyCOmM
+https://www.youtube.com/watch?v=EAcD5ueqvHQ
+pip install flask flask_restx flask_sqlalchemy flask_jwt_extended 
+pipenv install python_decouple
+
+crea file .env
+nel terminale 
+    python 
+    import secrets
+    secrets.token_hex(12)
+
+copia la chiave e inconlla in .env
+
+pip install datetime
+
+creato models.python    
+    terminale
+    set FLASK_APP=main.py
+    $env:FLASK_APP = "main.py"
+    flask shell
+    db
+    db.create_all()
+    set SQLALCHEMY_DATABASE_URI="postgresql://postgres:M4ss1m0M4r0ng1u@localhost/trasportiproject"
+
+avvio server python main.py
+
+user->
+terminale
+pip install Werkzeug
+
+python
+password='password'
+from werkzeug.security import generate_password_hash,check_password_hash
+pwd_hash=generate_password_hash(password)
+pwd_hash
+check_password_hash(pwd_hash,'password')
+
+per le autorizzazioni a ogni pagina
+fai il login da postman
+copia access token
+"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6ZmFsc2UsImlhdCI6MTcwNDg4NTk3MiwianRpIjoiMDdkZjI0NTEtZjlhNS00ODRlLWE3YjItNzkyZjgxYTU0YTU1IiwidHlwZSI6ImFjY2VzcyIsInN1YiI6Im1hc3NpIiwibmJmIjoxNzA0ODg1OTcyLCJjc3JmIjoiODgxNGIwMjYtYzQ1OS00NDkyLTgxMjUtNDc5MzZmNjZmZTJjIiwiZXhwIjoxNzA0ODg2ODcyfQ.6BdlhGhhVKOzpcOhuOjAjVgQfdeOh9VFBaIN6_jGvCI",
+    "refresh_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.
+vai in authorization di postman
+e incolla in Tokoen
+
+pipenv install flask-cors
+pip install psycopg2-binary
+
+npm i --save @fortawesome/fontawesome-svg-core
+npm install --save @fortawesome/free-solid-svg-icons
+npm install --save @fortawesome/react-fontawesome
+
+https://react-hook-form.com/get-started
+
+npm install react-token-auth

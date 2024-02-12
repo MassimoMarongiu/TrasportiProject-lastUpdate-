@@ -1,0 +1,78 @@
+modal applica modifica
+
+                  <Modal
+                      show={showModifica}
+                      onHide={handleCloseModifica}
+                      style={{
+                        marginTop: "150px",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        flexWrap: "wrap",
+                      }}
+                    >
+                      <Modal.Header closeButton>
+                        <Modal.Title>
+                          Sei sicuro di voler modificare la modifica?
+                        </Modal.Title>
+                      </Modal.Header>
+                      <Modal.Footer>
+                        <Button
+                          variant="primary"
+                          onClick={() => {
+                            // setSelectIdDT(e.iddescrizione);
+                            // setSelectEditDescrizioneTrasporti("False");
+                            navigate("/descrizioneTrasporto");
+                          }}
+                        >
+                          Si
+                        </Button>
+                        {/* console.log("gestire visibilita visibili tutti"); */}
+                        <Button variant="success" onClick={handleCloseModifica}>
+                          No
+                        </Button>
+                      </Modal.Footer>
+                    </Modal>
+
+
+modal annulla modifica 
+        <Button
+                      variant="danger"
+                      // onClick={handleShowAnnulla}
+                      style={{ marginLeft: "10px" }}
+                      onClick={navigate("/descrizioneTrasporto")}
+                    >
+                      Annulla
+                    </Button>
+   <Modal
+                      showAnnulla={showAnnulla}
+                      onHide={handleCloseAnnulla}
+                      style={{
+                        marginTop: "150px",
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        flexWrap: "wrap",
+                      }}
+                    >
+                      <Modal.Header closeButton>
+                        <Modal.Title>
+                          Sei sicuro di voler annullare la modifica?
+                        </Modal.Title>
+                      </Modal.Header>
+                      <Modal.Footer>
+                        <Button
+                          variant="primary"
+                          onClick={() => {
+                            // setSelectIdDT(e.iddescrizione);
+                            setSelectEditDescrizioneTrasporti("False");
+                          }}
+                        >
+                          Si
+                        </Button>
+                        {/* console.log("gestire visibilita visibili tutti"); */}
+                        <Button variant="success" onClick={handleCloseAnnulla}>
+                          No
+                        </Button>
+                      </Modal.Footer>
+                    </Modal>

@@ -1,0 +1,77 @@
+depositi ok backend
+descrizione trasporti ok backend
+localita trasporti ok backend
+tipo bolla ok backend
+tipo pagamento ok backend
+anagrafica ok backend
+documenti ok backend
+trasporti ok backend
+
+tutorial
+https://www.youtube.com/watch?v=RcQwcyyCOmM
+https://www.youtube.com/watch?v=EAcD5ueqvHQ
+https://www.youtube.com/watch?v=dam0GPOAvVI
+
+cocice autorizzazioni
+https://www.youtube.com/watch?v=nI8PYZNFtac
+https://github.com/gitdagray/react_jwt_auth/blob/main/src/components/Register.js   
+
+props tochild 
+https://www.youtube.com/watch?v=HVyB4cjcdrE&list=PLP5MAKLy8lP9Ekc_hVSggV7ZkUzgW7IrH&index=14
+da fare _>  
+in crea anagrafica perchè estero è string?
+            creare file ceck_authorization.js per controllare se si è loggati con il token 
+                                 controllo token ogni tot secondi e reindirizzamento
+            set time expire token
+            controllo password lunghezza e caratteri speciali
+            controllo registrazione lunghezza e caratteri speciali
+            add to model field time login
+            add to model field time registrazione
+            controllare login user o admin
+            controllo database su ogni user nel caso linkarlo a un user già registrato
+            invio email conferma registrazione e richieste di accesso non riuscite
+            pagina non autorizzato 
+            pagina non trovata
+            bottone toggle navbar
+            controllo se non è loggato tornare pagina iniziale
+            ? pagina benvenuto con nome user e foto?
+
+searchbar https://www.youtube.com/watch?v=sWVgMcz8Q44
+
+
+
+conversione date 
+in python 
+datetime.datetime.strptime("21/12/2008", "%d/%m/%Y").strftime("%Y-%m-%d")
+
+// Funzione per convertire la data in react
+function convertiData(giornoMeseAnno) {
+  // Dividi la data in giorno, mese e anno
+  const [giorno, mese, anno] = giornoMeseAnno.split('/');
+
+  // Crea un nuovo oggetto Date con il formato "anno mese giorno"
+  const nuovaData = new Date(`${anno}-${mese}-${giorno}`);
+
+  // Estrai anno, mese e giorno dalla nuova data
+  const nuovoAnno = nuovaData.getFullYear();
+  const nuovoMese = nuovaData.getMonth() + 1; // Mesi in JavaScript vanno da 0 a 11
+  const nuovoGiorno = nuovaData.getDate();
+
+  // Formatta la nuova data come "anno mese giorno"
+  const dataConvertita = `${nuovoAnno}-${pad(nuovoMese)}-${pad(nuovoGiorno)}`;
+
+  return dataConvertita;
+}
+
+// Funzione per aggiungere zero davanti ai numeri inferiori a 10
+function pad(numero) {
+  return numero < 10 ? `0${numero}` : numero;
+}
+
+// Esempio di utilizzo
+const dataOriginale = '25/01/2024';
+const dataConvertita = convertiData(dataOriginale);
+
+console.log(`Data originale: ${dataOriginale}`);
+console.log(`Data convertita: ${dataConvertita}`);
+In questo esempio, la funzione convertiData prende una data nel formato "giorno mese anno" (ad esempio, '25/01/2024') e restituisce la stessa data nel formato "anno mese giorno" ('2024-01-25'). La funzione pad viene utilizzata per assicurarsi che il mese e il giorno siano sempre formattati con due cifre.

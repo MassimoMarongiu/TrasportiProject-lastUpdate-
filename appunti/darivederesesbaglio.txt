@@ -1,0 +1,49 @@
+# # create DescrizioneTrasporti
+# @app.route('/creaDescrizioneTrasporti', methods = ['POST'])
+# def creaTrasporto():
+#     descrizione = request.json['descrizione']
+#     visibile = request.json['visibile']
+#     descrizione_trasporto = DescrizioneTrasporto(descrizione, visibile)
+#     db.session.add(descrizione_trasporto)
+#     db.session.commit()
+#     return format__descrizione_trasporti(descrizione_trasporto)
+
+# # get all DescrizioneTrasporti
+# @app.route('/descrizioneTrasporti', methods = ['GET'])
+# def get_all_descrizioneTrasporti():
+#     descrizioneTrasporti = DescrizioneTrasporto.query.order_by(DescrizioneTrasporto.iddescrizione.asc()).all()
+#     descrizioneTrasporti_list = []
+#     for descrizioneTrasporto in descrizioneTrasporti:
+#         descrizioneTrasporti_list.append(format__descrizione_trasporti(descrizioneTrasporto))
+#     return{'descrizioneTrasporti':descrizioneTrasporti_list}
+
+# # get single DescrizioneTrasporti
+# @app.route('/descrizioneTrasporti/<iddescrizione>', methods = ['GET'])
+# def get_descrizioneTrasporto(iddescrizione):
+#     descrizioneTrasporto = DescrizioneTrasporto.query.filter_by(iddescrizione=iddescrizione).one()
+#     formatted__descrizione_trasporti = format__descrizione_trasporti(descrizioneTrasporto)
+#     return {'descrizioneTrasporto':formatted__descrizione_trasporti}
+  
+# # delete descrizioneTrasporto
+# @app.route('/descrizioneTrasporti/<iddescrizione>', methods=['DELETE'])
+# def delete_descrizione_trasporto(iddescrizione):
+#     descrizioneTrasporto = DescrizioneTrasporto.query.filter_by(iddescrizione=iddescrizione).one()
+#     db.session.delete(descrizioneTrasporto)
+#     db.session.commit()
+#     return f'descrizioneTrasporti (id: {iddescrizione}) deleted!'
+
+# # update descrizioneTrasporti 
+# @app.route('/descrizioneTrasporti/<iddescrizione>',methods=['PUT'])
+# def update_descrizioneTrasporti(iddescrizione):
+#     descrizioneTrasporto = DescrizioneTrasporto.query.filter_by(iddescrizione=iddescrizione).first()
+    
+#     if descrizioneTrasporto:
+#         descrizioneTrasporto.descrizione = request.json.get('descrizione', descrizioneTrasporto.descrizione)
+#         descrizioneTrasporto.visibile = request.json.get('visibile', descrizioneTrasporto.visibile)
+#       # deposito.update(dict(Descrizione= deposito.Descrizione,created_at = datetime.utcnow()))
+#         # deposito.descrizione_created_at = request.json.get('deposito_created_at', created_at = datetime.utcnow())
+#         db.session.commit()
+        
+#         return {'descrizioneTrasporto': format__descrizione_trasporti(descrizioneTrasporto)}
+#     else:
+#         return {'error': 'descrizione Trasporto non trovato'}, 404
